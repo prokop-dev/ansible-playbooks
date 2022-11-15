@@ -8,4 +8,6 @@
       pacman:
         update_cache: yes
         upgrade: yes
+    - name: Unconditionally reboot the machine with all defaults
+      ansible.builtin.reboot:
 
