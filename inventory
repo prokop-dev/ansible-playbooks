@@ -3,7 +3,7 @@ all:
   children:
     os_arch:
       hosts:
-        ns383225.ip-5-196-72.eu
+        paris.prokop.dev # aka ns383225.ip-5-196-72.eu
       vars:
         ansible_user: arch
     os_ubuntu:

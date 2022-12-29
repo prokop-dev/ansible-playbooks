@@ -1,5 +1,5 @@
-- name: Update and upgrade apt packages
-  hosts: os_ubuntu
+- name: Full infrastructure restart
+  hosts: all
   become: true
 
   tasks:
