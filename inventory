@@ -1,3 +1,13 @@
-[arch]
-ns383225.ip-5-196-72.eu ansible_user=arch
-
+all:
+  hosts:
+  children:
+    os_arch:
+      hosts:
+        ns383225.ip-5-196-72.eu
+      vars:
+        ansible_user: arch
+    os_ubuntu:
+      hosts:
+        wales[1:3].prokop.dev
+      vars:
+        ansible_user: ubuntu
