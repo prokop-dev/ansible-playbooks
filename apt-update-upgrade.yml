@@ -1,0 +1,10 @@
+- name: Update and upgrade apt packages
+  hosts: os_ubuntu
+  become: true
+
+  tasks:
+    - name: apt update and upgrade
+      apt:
+        upgrade: yes
+        update_cache: yes
+        cache_valid_time: 86400 #One day
