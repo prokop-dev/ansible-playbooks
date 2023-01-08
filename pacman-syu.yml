@@ -1,6 +1,6 @@
 ---
 - name: All hosts up-to-date
-  hosts: arch
+  hosts: os_arch
   become: yes
   
   tasks:
