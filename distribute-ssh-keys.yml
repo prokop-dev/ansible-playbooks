@@ -1,12 +1,22 @@
 ---
-- name: All hosts with up-to-date SSH keys
-  hosts: arch
+- name: All Arch Linux hosts with up-to-date SSH keys
+  hosts: os_arch
   become: yes
   
   tasks:
     - name: Set authorized keys taken from url
       ansible.posix.authorized_key:
-        user: bart
+        user: arch
         state: present
         key: https://github.com/bartprokop.keys
 
+- name: All Ubuntu hosts with up-to-date SSH keys
+  hosts: os_ubuntu
+  become: yes
+
+  tasks:
+    - name: Set authorized keys taken from url
+      ansible.posix.authorized_key:
+        user: ubuntu
+        state: present
+        key: https://github.com/bartprokop.keys
